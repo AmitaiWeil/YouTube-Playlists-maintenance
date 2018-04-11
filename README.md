@@ -1,13 +1,11 @@
 # YouTube-Playlists-maintenance (C#)
-- Saving to an excel file all titles of all playlists of a YouTube channel, each playlist per worksheet.
-- Comparing between saved file and it's last version, so to know which
-  videos were deleted in all playlists (if title exists in last version),
-  and saving in a worksheet, so that the user can manually delete/look for a substitutes
-  for each title.
-  
- issues:
-  - for a big amount of playlists an error occurres while processing.
-  - An option for searching and/or deleting missing videos automatically.
+Comparing between titles of videos from all playlists of a YouTube user to a saved copy of the last same search,
+so to find the titles of videos which were deleted (in case title exists in last version).
+The details of the missing video-titles are saved to a worksheet and all playlists video titles are saved, each playlist per worksheet, so that the user can manually delete/look for a substitute.
+
+Using the software every once in a while can help easily removing/replacing deleted videos which 
+YouTube doesn’t provide details about.
+
   
   
   
