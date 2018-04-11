@@ -29,6 +29,7 @@ namespace YouTubePlaylistsMaintenance
             // choosing folder's path
             using (var dialog = new FolderBrowserDialog())
             {
+                dialog.Description = "Please choose directory";
                 if (dialog.ShowDialog() == DialogResult.OK)  //check for OK...they might press cancel, so don't do anything if they did.
                 {
                     var path = dialog.SelectedPath;
@@ -42,8 +43,10 @@ namespace YouTubePlaylistsMaintenance
                 try
                 {
                     firstEntry = true;
-
                     object misValue = System.Reflection.Missing.Value;       // no value is supplied for respective parameter
+
+                    MessageBox.Show("Did not manage to find an existing playlists-file in chosen directory,\ntherefor the titles of deleted videos can't be found." +
+                                    "\nA new file will be created in chosen directory.\n");
 
                     MyExcelApp = new Excel.Application();
                     MyExcelApp.Visible = true;

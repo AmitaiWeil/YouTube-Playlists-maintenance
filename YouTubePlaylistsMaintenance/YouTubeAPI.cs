@@ -106,7 +106,6 @@ namespace YouTubePlaylistsMaintenance
                     foreach (var item in respose.Items)
                     {
                         playlists.AddLast(new YouTubePlaylist(item.Id));
-                        //videos.AddLast(new YouTubeVideo(item.ContentDetails.VideoId));
                     }
 
                     nextPage = respose.NextPageToken;
@@ -116,7 +115,10 @@ namespace YouTubePlaylistsMaintenance
             }
             catch (Exception)
             {
-                MessageBox.Show("Error in retrieving channel's data\nCheck if the channel ID is entered correctly");
+                MessageBox.Show("Error in retrieving channel's data.\nCheck if the channel ID is entered correctly." +
+                                "\n\nFinding your channel ID can be done after signing-in \nto your YouTube account " +
+                                "and following the path: \n" +
+                                "clicking the account icon -> settings -> Advanced -> Account information.");
                 throw;
             }
         }

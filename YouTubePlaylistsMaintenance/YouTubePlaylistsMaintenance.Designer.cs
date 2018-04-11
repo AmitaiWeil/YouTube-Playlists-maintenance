@@ -95,7 +95,7 @@
             this.labelCurrentPlaylist.Name = "labelCurrentPlaylist";
             this.labelCurrentPlaylist.Size = new System.Drawing.Size(112, 13);
             this.labelCurrentPlaylist.TabIndex = 19;
-            this.labelCurrentPlaylist.Text = "Currently Proccessing:";
+            this.labelCurrentPlaylist.Text = "Currently Processing:";
             this.labelCurrentPlaylist.Visible = false;
             // 
             // FormYouTubePlaylistSave
@@ -115,7 +115,7 @@
             this.MaximizeBox = false;
             this.Name = "FormYouTubePlaylistSave";
             this.ShowIcon = false;
-            this.Text = "Playlsits Maintanace";
+            this.Text = "Playlists Maintenance";
             this.ResumeLayout(false);
             this.PerformLayout();
 
