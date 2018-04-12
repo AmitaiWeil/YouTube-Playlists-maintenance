@@ -69,6 +69,7 @@ namespace YouTubePlaylistsMaintenance
 
             YouTubePlaylist[] playLists = YouTubeAPI.GetPlaylists(channelID);
 
+            playLists = playLists.OrderBy(c => c.title).ToArray();
             for (int i = 0 ; i < playLists.Length; i++)
             {
                 listBoxPlaylists.Items.Add((i + 1).ToString() + ": " + playLists[i].title);
