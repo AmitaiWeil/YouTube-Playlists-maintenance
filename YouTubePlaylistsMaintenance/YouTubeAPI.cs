@@ -41,7 +41,7 @@ namespace YouTubePlaylistsMaintenance
             return service;
         }
 
-        internal static YouTubeVideo[] GetPlaylist(string playlistId)
+        internal static YouTubeVideo[] GetPlaylistVideos(string playlistId)
         {
             var request = ytService.PlaylistItems.List("contentDetails");
             request.PlaylistId = playlistId;
@@ -119,7 +119,8 @@ namespace YouTubePlaylistsMaintenance
                                 "\n\nFinding your channel ID can be done after signing-in \nto your YouTube account " +
                                 "and following the path: \n" +
                                 "clicking the account icon -> settings -> Advanced -> Account information.");
-                throw;
+
+                return null;
             }
         }
 
